@@ -58,7 +58,7 @@ class AudioGenerator(tf.keras.utils.Sequence):
     self.sr = sr
     self.input_size = input_size
     self.shuffle = shuffle
-    self.idxs = df.index
+    self.idxs = np.array(df.index)
     self.on_epoch_end()
     
 
